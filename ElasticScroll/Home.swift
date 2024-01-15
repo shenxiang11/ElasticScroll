@@ -34,7 +34,7 @@ struct Home: View {
             Image(message.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 55, height: 55)
+                .frame(width: 70, height: 70)
                 .clipShape(Circle())
                 .overlay(alignment: .bottomTrailing) {
                     Circle()

@@ -22,6 +22,7 @@ struct ElasticScroll: ViewModifier {
         content
             .offset(y: scrollRect.minY > 0 ? elasticOffset : 0)
             .offset(y: scrollRect.maxY < screenSize.height ? bottomElasticOffset : 0)
+            .offset(y: scrollRect.maxY < screenSize.height ? -(bottomProgress * scrollRect.maxY) : 0)
             .offsetExtractor(coordinateSpace: "SCROLL_VIEW") { rect in
                 viewRect = rect
             }
